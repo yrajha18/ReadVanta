@@ -57,7 +57,87 @@ const Home = () => {
 
       </section>
 
+      {/* ================= HOW IT WORKS (ABOUT) ================= */}
+      <section id="about" className="py-20 px-6 bg-black relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500/50 to-transparent"></div>
+        
+        <div className="max-w-6xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">How It Works</h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              ReadVanta combines the joy of reading with the power of AI to transform your learning journey.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-12 relative">
+            {/* Connection lines (desktop only) */}
+            <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-800 -z-10 transform -translate-y-1/2"></div>
+
+            {[
+              {
+                step: "01",
+                icon: "🔍",
+                title: "Discover",
+                desc: "Browse our curated collection of books across various categories. Find your next great read in seconds.",
+                color: "from-orange-500 to-orange-300"
+              },
+              {
+                step: "02",
+                icon: "🧠",
+                title: "AI Analysis",
+                desc: "Get instant AI-generated summaries and insights. Understand complex concepts without spending hours.",
+                color: "from-blue-500 to-blue-300"
+              },
+              {
+                step: "03",
+                icon: "👥",
+                title: "Connect",
+                desc: "Join book clubs, discuss with fellow readers, and share your insights in a vibrant community.",
+                color: "from-purple-500 to-purple-300"
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.2 }}
+                whileHover={{ y: -10 }}
+                className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-3xl border border-gray-800 hover:border-orange-500/50 transition-all group"
+              >
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
+                  {item.icon}
+                </div>
+                <div className="text-sm font-bold text-orange-500 mb-2">{item.step}</div>
+                <h3 className="text-2xl font-bold mb-4 text-white">{item.title}</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="mt-16 text-center"
+          >
+            <div className="inline-block p-1 rounded-full bg-gradient-to-r from-orange-500 via-blue-500 to-purple-500">
+              <div className="px-8 py-3 rounded-full bg-black text-white font-medium">
+                Ready to transform your reading?
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ================= FEATURES ================= */}
+
       <section className="py-20 px-6 text-center bg-gray-950">
 
         <h2 className="text-3xl font-bold mb-12">

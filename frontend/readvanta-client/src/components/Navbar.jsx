@@ -51,6 +51,9 @@ const Navbar = () => {
           <Link to="/" className="text-white hover:text-purple-400">
             Home
           </Link>
+          <a href="/#about" className="text-white hover:text-purple-400">
+            How it Works
+          </a>
           <Link to="/explore" className="text-white hover:text-purple-400">
             Explore
           </Link>
@@ -103,6 +106,9 @@ const Navbar = () => {
           <Link to="/" onClick={() => setMenuOpen(false)}>
             Home
           </Link>
+          <a href="/#about" onClick={() => setMenuOpen(false)}>
+            How it Works
+          </a>
           <Link to="/explore" onClick={() => setMenuOpen(false)}>
             Explore
           </Link>

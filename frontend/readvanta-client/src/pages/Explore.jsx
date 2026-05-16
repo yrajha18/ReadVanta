@@ -53,7 +53,7 @@ const Explore = () => {
 
         {/* Categories */}
         <div className="mt-5 flex flex-wrap gap-3">
-          {["All", "Self-help", "Tech", "Fiction"].map((cat) => (
+          {["All", "Self-help", "Tech", "Fiction", "Science", "Finance", "Business", "Philosophy", "Sci-Fi"].map((cat) => (
             <button
               key={cat}
               onClick={() => setCategory(cat)}
