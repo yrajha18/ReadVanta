@@ -36,7 +36,8 @@ const BookDetails = () => {
       });
       setSummary(res.summary);
     } catch (err) {
-      alert("Error generating summary");
+      const errorMsg = err.response?.data?.message || err.response?.data?.error || "Error generating summary";
+      alert(`AI Error: ${errorMsg}`);
     } finally {
       setLoadingSummary(false);
     }

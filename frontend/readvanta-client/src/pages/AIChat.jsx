@@ -23,7 +23,8 @@ function AIChat() {
       const res = await sendAiChat(userMsg);
       setMessages(prev => [...prev, { sender: 'ai', text: res.reply }]);
     } catch (err) {
-      setMessages(prev => [...prev, { sender: 'ai', text: "Sorry, I'm having trouble connecting right now." }]);
+      const errorMsg = err.response?.data?.message || err.response?.data?.error || "Sorry, I'm having trouble connecting right now.";
+      setMessages(prev => [...prev, { sender: 'ai', text: `Error: ${errorMsg}` }]);
     } finally {
       setLoading(false);
     }

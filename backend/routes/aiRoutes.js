@@ -16,14 +16,22 @@ router.post("/summary", async (req, res) => {
     const prompt = `Provide a short, engaging 2-paragraph summary and analysis of the book "${title}" by ${author}. Context: ${description}`;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-1.5-flash',
       contents: prompt,
     });
+
+    if (!response || !response.text) {
+       throw new Error("Invalid response from AI model");
+    }
 
     res.json({ summary: response.text });
   } catch (err) {
     console.error("AI Summary Error:", err);
-    res.status(500).json({ message: "Error generating summary" });
+    res.status(500).json({ 
+      message: "Error generating summary", 
+      error: err.message,
+      details: err.response?.data || "No further details"
+    });
   }
 });
 
@@ -42,14 +50,21 @@ router.post("/chat", async (req, res) => {
     const finalPrompt = `${systemInstruction}\n\nUser: ${prompt}`;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-1.5-flash',
       contents: finalPrompt,
     });
+
+    if (!response || !response.text) {
+      throw new Error("Invalid response from AI model");
+    }
 
     res.json({ reply: response.text });
   } catch (err) {
     console.error("AI Chat Error:", err);
-    res.status(500).json({ message: "Error generating AI response" });
+    res.status(500).json({ 
+      message: "Error generating AI response",
+      error: err.message 
+    });
   }
 });
 
