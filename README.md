@@ -87,18 +87,6 @@ ReadVanta is a premium web application designed to revolutionize the way we disc
 
 ---
 
-## 📸 Screenshots
-
-| Home Page | Explore Books |
-| :---: | :---: |
-| ![Home](https://via.placeholder.com/400x250?text=ReadVanta+Home) | ![Explore](https://via.placeholder.com/400x250?text=ReadVanta+Explore) |
-
-| AI Chat | Book Clubs |
-| :---: | :---: |
-| ![Chat](https://via.placeholder.com/400x250?text=AI+Chat) | ![Clubs](https://via.placeholder.com/400x250?text=Book+Clubs) |
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
@@ -111,4 +99,4 @@ This project is licensed under the MIT License.
 
 ---
 
-Created with ❤️ by [Your Name/ReadVanta Team]
+Created with ❤️ by YASH RAJ
