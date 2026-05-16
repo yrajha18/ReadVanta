@@ -31,7 +31,7 @@ const books = [
     title: "Deep Work",
     author: "Cal Newport",
     category: "Self-help",
-    image: "https://images-na.ssl-images-amazon.com/images/I/417S9Z69S-L.jpg",
+    image: "https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg",
     description: "Rules for focused success in a distracted world."
   },
   {
@@ -45,7 +45,7 @@ const books = [
     title: "The Psychology of Money",
     author: "Morgan Housel",
     category: "Finance",
-    image: "https://images-na.ssl-images-amazon.com/images/I/71TR7S70GUL.jpg",
+    image: "https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg",
     description: "Timeless lessons on wealth, greed, and happiness."
   },
   {
@@ -59,14 +59,14 @@ const books = [
     title: "Man's Search for Meaning",
     author: "Viktor Frankl",
     category: "Philosophy",
-    image: "https://images-na.ssl-images-amazon.com/images/I/6115mS7S9UL.jpg",
+    image: "https://covers.openlibrary.org/b/isbn/9780807014295-L.jpg",
     description: "A psychiatrist's memoir of surviving the Holocaust and finding meaning in life."
   },
   {
     title: "Project Hail Mary",
     author: "Andy Weir",
     category: "Sci-Fi",
-    image: "https://images-na.ssl-images-amazon.com/images/I/9199O+f7X6L.jpg",
+    image: "https://covers.openlibrary.org/b/isbn/9780593135204-L.jpg",
     description: "A lone astronaut must save the earth from disaster in this gripping science fiction thriller."
   }
 ];

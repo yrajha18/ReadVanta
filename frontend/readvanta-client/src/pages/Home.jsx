@@ -136,7 +136,57 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ================= REQUEST A BOOK ================= */}
+      <section className="py-24 px-6 relative overflow-hidden bg-gray-950">
+        {/* Animated Background Gradients */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-600/10 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4"></div>
+
+        <div className="max-w-4xl mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="bg-gray-900/40 backdrop-blur-xl border border-white/10 p-10 md:p-16 rounded-[40px] shadow-2xl text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Can't find a book?
+              <br />
+              <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
+                Request it now.
+              </span>
+            </h2>
+            <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
+              Tell us what you'd like to read next, and our AI will prioritize adding it to the platform.
+            </p>
+
+            <form className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+              <input
+                type="text"
+                placeholder="Book Title"
+                className="flex-grow p-4 rounded-2xl bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-orange-500/50 transition-all text-white"
+              />
+              <input
+                type="text"
+                placeholder="Author Name"
+                className="flex-grow p-4 rounded-2xl bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all text-white"
+              />
+              <button
+                type="button"
+                className="px-8 py-4 rounded-2xl bg-gradient-to-r from-orange-500 to-blue-500 text-black font-bold hover:scale-105 transition-transform shadow-lg shadow-orange-500/20"
+              >
+                Submit
+              </button>
+            </form>
+            
+            <p className="mt-6 text-sm text-gray-500">
+              Join 1,000+ readers suggesting books every week.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ================= FEATURES ================= */}
+
 
       <section className="py-20 px-6 text-center bg-gray-950">
 
